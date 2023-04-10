@@ -1,0 +1,14 @@
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\bin\Debug\MyS_Proje.exe.config
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\bin\Debug\MyS_Proje.exe
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\bin\Debug\MyS_Proje.pdb
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.csproj.AssemblyReference.cache
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.csproj.SuggestedBindingRedirects.cache
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.Form1.resources
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.Form2.resources
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.Properties.Resources.resources
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.csproj.GenerateResource.cache
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.csproj.CoreCompileInputs.cache
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.exe
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.pdb
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.Form3.resources
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.login.resources
