@@ -17,8 +17,8 @@ namespace MyS_Proje
 
         public Form1()
         { InitializeComponent();
-            textBox3.Text = "0";
-            
+             textBox3.Text = "0";
+
             if (textBox3.Text == "0")
             {
                 button1.Visible = false;
@@ -26,7 +26,7 @@ namespace MyS_Proje
                 button3.Visible = false;
                 button4.Visible = false;
                 button6.Visible = false;
-                groupBox1.Visible=  true; 
+                groupBox1.Visible = true;
             }
             else if (textBox3.Text == "1")
             {
@@ -64,42 +64,35 @@ namespace MyS_Proje
             gecis = komut.ExecuteReader();
             if (gecis.Read())
             {
-
+               
                 textBox3.Text = "1";
-                
-                MessageBox.Show("Tebrikler Basarı ile giriş yaptınız.");
-
-                baglanti.Close();
-
                 button1.Visible = true;
                 button2.Visible = true;
                 button3.Visible = true;
                 button4.Visible = true;
                 button6.Visible = true;
                 groupBox1.Hide();
+                baglanti.Close();
                 this.InitializeComponent();
-
-
-
-            }
+                MessageBox.Show("Tebrikler Basarı ile giriş yaptınız.");
+ }
             else
             {
-                MessageBox.Show("Kullanıcı adınızı veya şifrenizi kontrol ediniz.");
-                textBox3.Text = "0";
-                baglanti.Close();
-                
+               textBox3.Text = "0";
+               baglanti.Close();
+               MessageBox.Show("Kullanıcı adınızı veya şifrenizi kontrol ediniz.");
             }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            textBox3.Text+= "0";
-            button1.Hide(); 
-            button2.Hide();
-            button3.Hide();
-            button4.Hide();
+            textBox3.Text= "0";
+            button1.Visible = false; 
+            button2.Visible = false;
+            button3.Visible = false;
+            button4.Visible = false;
             groupBox1.Visible = true;
-            this.InitializeComponent();
+            return Form1;
             
         }
     }
