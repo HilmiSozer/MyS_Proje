@@ -11,4 +11,6 @@ C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.csproj.CoreC
 C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.exe
 C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.pdb
 C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.Form3.resources
-C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.login.resources
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.Form4.resources
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\bin\Debug\Zen.Barcode.Core.dll
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.csproj.CopyComplete

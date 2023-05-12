@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Zen.Barcode;
 
 namespace MyS_Proje
 {
@@ -22,10 +23,13 @@ namespace MyS_Proje
         {
             listele();
             Random sayi = new Random();
-
-
-            int rnd = sayi.Next(1000);
+            baglanti.Open();
+            SqlCommand toplamurun= new SqlCommand("select *from itemscounter",baglanti);
+            //textBox1.Text=toplamurun.ExecuteNonQuery().ToString();
+            baglanti.Close();
+            int rnd = sayi.Next(10000);
             label1.Text = rnd.ToString();
+
             textBox6.Text = "STANDART";
             textBox6.Text = "STANDART";
             textBox6.Text = "STANDART";
@@ -49,6 +53,7 @@ namespace MyS_Proje
             comboBox2.Items.Add("5");
             comboBox2.SelectedIndex = 0;
 
+            textBox1.Text = label1.Text;
 
         }
         private void button1_Click(object sender, EventArgs e)
@@ -61,6 +66,8 @@ namespace MyS_Proje
             {
                 if(comboBox2.SelectedIndex==0)
                 baglanti.Open();
+                Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum ;
+                pictureBox1.Image = barcode.Draw(textBox1.Text, 20);
                 SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + textBox3.Text + "','" + textBox5.Text + "')", baglanti);
                 komut.ExecuteNonQuery();
 

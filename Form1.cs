@@ -17,26 +17,15 @@ namespace MyS_Proje
 
         public Form1()
         { InitializeComponent();
-             textBox3.Text = "0";
-
-            if (textBox3.Text == "0")
-            {
-                button1.Visible = false;
+             
+               /* button1.Visible = false;
                 button2.Visible = false;
                 button3.Visible = false;
                 button4.Visible = false;
                 button6.Visible = false;
-                groupBox1.Visible = true;
-            }
-            else if (textBox3.Text == "1")
-            {
-                button1.Visible = true;
-                button2.Visible = true;
-                button3.Visible = true;
-                button4.Visible = true;
-                button6.Visible = true;
-                groupBox1.Hide();
-            }
+                groupBox1.Visible = true;*/
+            
+            
 
         }
 
@@ -65,7 +54,7 @@ namespace MyS_Proje
             if (gecis.Read())
             {
                
-                textBox3.Text = "1";
+              
                 button1.Visible = true;
                 button2.Visible = true;
                 button3.Visible = true;
@@ -73,12 +62,12 @@ namespace MyS_Proje
                 button6.Visible = true;
                 groupBox1.Hide();
                 baglanti.Close();
-                this.InitializeComponent();
+                
                 MessageBox.Show("Tebrikler Basarı ile giriş yaptınız.");
  }
             else
             {
-               textBox3.Text = "0";
+              
                baglanti.Close();
                MessageBox.Show("Kullanıcı adınızı veya şifrenizi kontrol ediniz.");
             }
@@ -86,14 +75,15 @@ namespace MyS_Proje
 
         private void button6_Click(object sender, EventArgs e)
         {
-            textBox3.Text= "0";
-            button1.Visible = false; 
-            button2.Visible = false;
-            button3.Visible = false;
-            button4.Visible = false;
-            groupBox1.Visible = true;
-            return Form1;
-            
+            this.Close();
+
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form form4= new Form4();
+            form4.ShowDialog(); 
         }
     }
     }

@@ -66,6 +66,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.tableAdapterManager1 = new MyS_Proje.MySDataSetTableAdapters.TableAdapterManager();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mySDataSet)).BeginInit();
@@ -75,6 +76,7 @@
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -195,7 +197,7 @@
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.ForeColor = System.Drawing.Color.DarkRed;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 24);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1152, 229);
             this.groupBox1.TabIndex = 12;
@@ -402,11 +404,20 @@
             this.tableAdapterManager1.UpdateOrder = MyS_Proje.MySDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager1.urunlerTableAdapter = this.urunlerTableAdapter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(452, 647);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(156, 50);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 695);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Kayitbuton);
@@ -430,6 +441,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -473,5 +485,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button2;
         private MySDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
