@@ -33,17 +33,6 @@ namespace MyS_Proje
             baglanti.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            baglanti.Open();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("select * from urunler where urun_kodu like '%" + textBox1.Text + "%' or urun_ismi like '%" + textBox1.Text + "%' ", baglanti);
-            DataTable dt = new DataTable();
-            dataAdapter.Fill(dt);
-            dataGridView1.DataSource = dt;
-            
-            baglanti.Close();
-        }
-
         private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawString(this.label1.Text,this.label1.Font,Brushes.Black,50,50);
@@ -65,6 +54,30 @@ namespace MyS_Proje
             printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.ShowDialog(); 
 
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("select * from urunler where urun_kodu like '%" + textBox1.Text + "%' or urun_ismi like '%" + textBox1.Text + "%' ", baglanti);
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+            baglanti.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            label2.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            label3.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            label4.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            Zen.Barcode.Code128BarcodeDraw barcode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+            pictureBox1.Image = barcode.Draw(label1.Text, 20);
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
 
         }
     }

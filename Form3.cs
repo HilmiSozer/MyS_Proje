@@ -53,34 +53,24 @@ namespace MyS_Proje
         
 
 
-
-        private void button2_Click(object sender, EventArgs e)
-        { baglanti.Open();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("select * from urunler where urun_kodu like '%" + textBox1.Text + "%' or urun_ismi like '%" + textBox1.Text + "%' ", baglanti);
-            DataTable dt = new DataTable();
-            dataAdapter.Fill(dt);
-            dataGridView1.DataSource= dt;
-            baglanti.Close();
-         }  
-        
-
-
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-           
-            textBox1.Clear();
-
-            listele();
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand kayit = new SqlCommand("UPDATE urunler set '" + dataGridView1.CurrentCell.Value.ToString() + "' where urun_adet= '"+dataGridView1.CurrentCell.Value.ToString() +"'  " , baglanti);
+            SqlCommand kayit = new SqlCommand("UPDATE urunler set '" + dataGridView1.CurrentCell.Value + "' where urun_adet= '"+dataGridView1.CurrentCell.Value.ToString() +"'  " , baglanti);
             kayit.ExecuteNonQuery();
             baglanti.Close();
             listele();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("select * from urunler where urun_kodu like '%" + textBox1.Text + "%' or urun_ismi like '%" + textBox1.Text + "%' ", baglanti);
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+            baglanti.Close();
         }
     }
 }

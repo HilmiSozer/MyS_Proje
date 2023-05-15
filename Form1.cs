@@ -85,6 +85,12 @@ namespace MyS_Proje
             Form form4= new Form4();
             form4.ShowDialog(); 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form form5 = new Form5();   
+            form5.ShowDialog();
+        }
     }
     }
 
