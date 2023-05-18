@@ -40,8 +40,8 @@ namespace MyS_Proje
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form3 form3olustur= new Form3();    //ürün düzenleme sayfası
-            form3olustur.ShowDialog();
+            Form3 form3= new Form3();    //ürün düzenleme sayfası
+            form3.ShowDialog();
         }
 
         

@@ -15,28 +15,44 @@ namespace MyS_Proje
 {
     public partial class Form2 : Form
 
-    {
-        public Form2() { InitializeComponent(); }
+    {int counter;
+        
+        public Form2() { InitializeComponent();  
+        SqlCommand update = new SqlCommand("update itemscounter set '"+counter+"' ", baglanti);
+        }
 
         SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-BF37VJF;Initial Catalog=MyS;Integrated Security=True");
+        
+
         private void Form2_Load(object sender, EventArgs e)
         {
             listele();
-            Random sayi = new Random();
+            
             baglanti.Open();
-            SqlCommand toplamurun= new SqlCommand("select *from itemscounter",baglanti);
-            //textBox1.Text=toplamurun.ExecuteNonQuery().ToString();
+            
+            SqlDataReader read;
+            SqlCommand counteradder = new SqlCommand("select *from itemscounter  ", baglanti);
+            counteradder.ExecuteNonQuery();
+            read = counteradder.ExecuteReader();
+            while (read.Read())
+                textBox1.Text = read["itemscount"].ToString();
+
             baglanti.Close();
-            int rnd = sayi.Next(10000);
-            label1.Text = rnd.ToString();
+            counter = Convert.ToUInt16(textBox1.Text)+1;
+            
+           
 
         
 
-            textBox1.Text = label1.Text;
+            
 
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            
+
+            
+            baglanti.Close();
             if (textBox1.Text == "" | textBox2.Text == ""  | textBox5.Text == "")
             {
                 MessageBox.Show("Değerler boş olamaz.", "Uyarı");
@@ -48,9 +64,10 @@ namespace MyS_Proje
               
                 SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + button3.Text + "','" + textBox5.Text + "')", baglanti);
                 komut.ExecuteNonQuery();
-
+               
                 baglanti.Close();
                 listele();
+
 
             }
         }
