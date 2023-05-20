@@ -15,17 +15,19 @@ namespace MyS_Proje
 {
     public partial class Form2 : Form
 
-    {int counter;
+    {
         
         public Form2() { InitializeComponent();  
         SqlCommand update = new SqlCommand("update itemscounter set '"+counter+"' ", baglanti);
         }
 
         SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-BF37VJF;Initial Catalog=MyS;Integrated Security=True");
-        
+        int counter;
+        string holder;
 
         private void Form2_Load(object sender, EventArgs e)
         {
+         
             listele();
             
             baglanti.Open();
@@ -61,10 +63,89 @@ namespace MyS_Proje
             {
                 
                 baglanti.Open();
-              
-                SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + button3.Text + "','" + textBox5.Text + "')", baglanti);
-                komut.ExecuteNonQuery();
-               
+                foreach (var item in checkedListBox1.CheckedItems)
+                {
+                    if (item.Equals("Small"))
+                        
+                    {
+                        holder = textBox1.Text + "1" + "1";
+
+                        SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat,urun_beden,urun_id) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + button3.Text + "','" + textBox5.Text + "','"+item.ToString() +"','" + holder + "')", baglanti);
+                        komut.ExecuteNonQuery();
+                    }
+                        
+                    if (item.Equals("Medium"))
+                    {
+                        holder = textBox1.Text + "1" + "2";
+
+                        SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat,urun_beden,urun_id) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + button3.Text + "','" + textBox5.Text + "','" + item.ToString() + "','" + holder + "')", baglanti);
+                        komut.ExecuteNonQuery();
+                    }
+                    if (item.Equals("Large"))
+                    {
+                        holder = textBox1.Text + "1" + "3";
+
+                        SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat,urun_beden,urun_id) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + button3.Text + "','" + textBox5.Text + "','" + item.ToString() + "','" + holder + "')", baglanti);
+                        komut.ExecuteNonQuery();
+                    }
+                    if (item.Equals("XLarge"))
+                    {
+                        holder = textBox1.Text + "1" + "4";
+
+                        SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat,urun_beden,urun_id) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + button3.Text + "','" + textBox5.Text + "','" + item.ToString() + "','" + holder + "')", baglanti);
+                        komut.ExecuteNonQuery();
+                    }
+                    if (item.Equals("XXL"))
+                    {
+                        holder = textBox1.Text + "1" + "5";
+
+                        SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat,urun_beden,urun_id) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + button3.Text + "','" + textBox5.Text + "','" + item.ToString() + "','" + holder + "')", baglanti);
+                        komut.ExecuteNonQuery();
+                    }
+                }
+                foreach (var item in checkedListBox2.CheckedItems)
+                {
+                    if (item.Equals("Small"))
+
+                    {
+                        holder = textBox1.Text + "2" + "1";
+
+                        SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat,urun_beden,urun_id) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + button7.Text + "','" + textBox5.Text + "','" + item.ToString() + "','" + holder + "')", baglanti);
+                        komut.ExecuteNonQuery();
+                    }
+
+                    if (item.Equals("Medium"))
+                    {
+                        holder = textBox1.Text + "2" + "2";
+
+                        SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat,urun_beden,urun_id) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + button7.Text + "','" + textBox5.Text + "','" + item.ToString() + "','" + holder + "')", baglanti);
+                        komut.ExecuteNonQuery();
+                    }
+                    if (item.Equals("Large"))
+                    {
+                        holder = textBox1.Text + "2" + "3";
+
+                        SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat,urun_beden,urun_id) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + button7.Text + "','" + textBox5.Text + "','" + item.ToString() + "','" + holder + "')", baglanti);
+                        komut.ExecuteNonQuery();
+                    }
+                    if (item.Equals("XLarge"))
+                    {
+                        holder = textBox1.Text + "2" + "4";
+
+                        SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat,urun_beden,urun_id) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + button7.Text + "','" + textBox5.Text + "','" + item.ToString() + "','" + holder + "')", baglanti);
+                        komut.ExecuteNonQuery();
+                    }
+                    if (item.Equals("XXL"))
+                    {
+                        holder = textBox1.Text + "2" + "5";
+
+                        SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat,urun_beden,urun_id) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + button7.Text + "','" + textBox5.Text + "','" + item.ToString() + "','" + holder + "')", baglanti);
+                        komut.ExecuteNonQuery();
+                    }
+                }
+
+
+
                 baglanti.Close();
                 listele();
 
