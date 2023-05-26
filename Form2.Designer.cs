@@ -36,18 +36,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox5 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -58,8 +46,6 @@
             this.urunlerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.urunlerTableAdapter1 = new MyS_Proje.MySDataSet1TableAdapters.urunlerTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mySDataSet1 = new MyS_Proje.MySDataSet1();
-            this.urunlerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.urunkoduDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunismiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunrengiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +53,9 @@
             this.urunfiyatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunbedenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunlerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.mySDataSet1 = new MyS_Proje.MySDataSet1();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -74,8 +63,9 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mySDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mySDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // urunlerTableAdapter
@@ -116,18 +106,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
-            this.groupBox1.Controls.Add(this.checkedListBox6);
-            this.groupBox1.Controls.Add(this.checkedListBox5);
-            this.groupBox1.Controls.Add(this.checkedListBox4);
-            this.groupBox1.Controls.Add(this.checkedListBox3);
-            this.groupBox1.Controls.Add(this.checkedListBox2);
-            this.groupBox1.Controls.Add(this.checkedListBox1);
-            this.groupBox1.Controls.Add(this.button8);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.dataGridView2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.groupBox3);
@@ -139,177 +118,6 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgileri";
-            // 
-            // checkedListBox6
-            // 
-            this.checkedListBox6.FormattingEnabled = true;
-            this.checkedListBox6.Items.AddRange(new object[] {
-            "Small",
-            "Medium",
-            "Large",
-            "XLarge",
-            "XXLarge",
-            "STD"});
-            this.checkedListBox6.Location = new System.Drawing.Point(969, 69);
-            this.checkedListBox6.Name = "checkedListBox6";
-            this.checkedListBox6.Size = new System.Drawing.Size(75, 94);
-            this.checkedListBox6.TabIndex = 33;
-            // 
-            // checkedListBox5
-            // 
-            this.checkedListBox5.FormattingEnabled = true;
-            this.checkedListBox5.Items.AddRange(new object[] {
-            "Small",
-            "Medium",
-            "Large",
-            "XLarge",
-            "XXLarge",
-            "STD"});
-            this.checkedListBox5.Location = new System.Drawing.Point(888, 69);
-            this.checkedListBox5.Name = "checkedListBox5";
-            this.checkedListBox5.Size = new System.Drawing.Size(75, 94);
-            this.checkedListBox5.TabIndex = 32;
-            // 
-            // checkedListBox4
-            // 
-            this.checkedListBox4.FormattingEnabled = true;
-            this.checkedListBox4.Items.AddRange(new object[] {
-            "Small",
-            "Medium",
-            "Large",
-            "XLarge",
-            "XXLarge",
-            "STD"});
-            this.checkedListBox4.Location = new System.Drawing.Point(807, 69);
-            this.checkedListBox4.Name = "checkedListBox4";
-            this.checkedListBox4.Size = new System.Drawing.Size(75, 94);
-            this.checkedListBox4.TabIndex = 31;
-            // 
-            // checkedListBox3
-            // 
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Items.AddRange(new object[] {
-            "Small",
-            "Medium",
-            "Large",
-            "XLarge",
-            "XXLarge",
-            "STD"});
-            this.checkedListBox3.Location = new System.Drawing.Point(726, 69);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(75, 94);
-            this.checkedListBox3.TabIndex = 30;
-            // 
-            // checkedListBox2
-            // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
-            "Small",
-            "Medium",
-            "Large",
-            "XLarge",
-            "XXLarge",
-            "STD"});
-            this.checkedListBox2.Location = new System.Drawing.Point(645, 69);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(75, 94);
-            this.checkedListBox2.TabIndex = 29;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Small",
-            "Medium",
-            "Large",
-            "XLarge",
-            "XXLarge",
-            "STD"});
-            this.checkedListBox1.Location = new System.Drawing.Point(564, 69);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(75, 94);
-            this.checkedListBox1.TabIndex = 28;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Navy;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.Cyan;
-            this.button8.Location = new System.Drawing.Point(969, 31);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 27;
-            this.button8.Text = "Koyu Mavi";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Black;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.Snow;
-            this.button7.Location = new System.Drawing.Point(645, 31);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 26;
-            this.button7.Text = "Siyah";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(564, 31);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Beyaz";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Cyan;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button6.Location = new System.Drawing.Point(888, 31);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 24;
-            this.button6.Text = "Açık Mavi";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Blue;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button5.Location = new System.Drawing.Point(807, 31);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Mavi";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Silver;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Green;
-            this.button4.Location = new System.Drawing.Point(726, 31);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Gri";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -365,7 +173,7 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "Yeni Kayıt Oluştur";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            
             // 
             // button2
             // 
@@ -375,7 +183,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "Göster";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+          
             // 
             // tableAdapterManager1
             // 
@@ -405,16 +213,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1152, 348);
             this.dataGridView1.TabIndex = 15;
-            // 
-            // mySDataSet1
-            // 
-            this.mySDataSet1.DataSetName = "MySDataSet1";
-            this.mySDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // urunlerBindingSource2
-            // 
-            this.urunlerBindingSource2.DataMember = "urunler";
-            this.urunlerBindingSource2.DataSource = this.mySDataSet1;
             // 
             // urunkoduDataGridViewTextBoxColumn
             // 
@@ -458,6 +256,24 @@
             this.urunidDataGridViewTextBoxColumn.HeaderText = "urun_id";
             this.urunidDataGridViewTextBoxColumn.Name = "urunidDataGridViewTextBoxColumn";
             // 
+            // urunlerBindingSource2
+            // 
+            this.urunlerBindingSource2.DataMember = "urunler";
+            this.urunlerBindingSource2.DataSource = this.mySDataSet1;
+            // 
+            // mySDataSet1
+            // 
+            this.mySDataSet1.DataSetName = "MySDataSet1";
+            this.mySDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(459, 19);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(687, 204);
+            this.dataGridView2.TabIndex = 15;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -482,8 +298,9 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mySDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mySDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -503,18 +320,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private MySDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.CheckedListBox checkedListBox6;
-        private System.Windows.Forms.CheckedListBox checkedListBox5;
-        private System.Windows.Forms.CheckedListBox checkedListBox4;
-        private System.Windows.Forms.CheckedListBox checkedListBox3;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.BindingSource urunlerBindingSource1;
         private MySDataSet1TableAdapters.urunlerTableAdapter urunlerTableAdapter1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -527,5 +332,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn urunidDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource urunlerBindingSource2;
         private MySDataSet1 mySDataSet1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

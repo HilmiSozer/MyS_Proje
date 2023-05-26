@@ -75,7 +75,7 @@ namespace MyS_Proje
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("select * from urunler where urun_kodu like '%" + textBox1.Text + "%' or urun_ismi like '%" + textBox1.Text + "%' ", baglanti);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("select * from urunler where urun_kodu like '%"+textBox1.Text+"%' or urun_ismi like '%"+textBox1.Text+"%' ", baglanti);
             DataTable dt = new DataTable();
             dataAdapter.Fill(dt);
             dataGridView1.DataSource = dt;

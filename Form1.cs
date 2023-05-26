@@ -18,7 +18,7 @@ namespace MyS_Proje
         public Form1()
         { InitializeComponent();
              
-               /* button1.Visible = false;
+                /*button1.Visible = false;
                 button2.Visible = false;
                 button3.Visible = false;
                 button4.Visible = false;
