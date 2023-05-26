@@ -39,6 +39,7 @@ namespace MyS_Proje
             e.Graphics.DrawString(this.label2.Text, this.label2.Font, Brushes.Black, 150, 50);
             e.Graphics.DrawString(this.label3.Text, this.label4.Font, Brushes.Black, 50, 100);
             e.Graphics.DrawString(this.label4.Text, this.label4.Font, Brushes.Black, 100, 100);
+            e.Graphics.DrawString(this.label5.Text,this.label5.Font, Brushes.Black,100,100);
             e.Graphics.DrawString("TL",new Font("Ariel",12,FontStyle.Regular),Brushes.Black,200,100);
             e.Graphics.DrawImage(this.pictureBox1.Image,75,150);
         }
