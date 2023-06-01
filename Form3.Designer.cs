@@ -31,17 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.urunkoduDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunismiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunrengiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunadetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunfiyatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ürün_beden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urun_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunlerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.mySDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mySDataSet = new MyS_Proje.MySDataSet();
-            this.urunlerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.urunlerTableAdapter = new MyS_Proje.MySDataSetTableAdapters.urunlerTableAdapter();
@@ -49,26 +42,31 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.urunlerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.urunfiyatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunadetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunrengiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunismiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunkoduDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.urunlerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mySDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mySDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.urunkoduDataGridViewTextBoxColumn,
@@ -78,42 +76,11 @@
             this.urunfiyatDataGridViewTextBoxColumn,
             this.ürün_beden,
             this.urun_id});
-            this.dataGridView1.DataSource = this.urunlerBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(22, 161);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(954, 406);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
-            // 
-            // urunkoduDataGridViewTextBoxColumn
-            // 
-            this.urunkoduDataGridViewTextBoxColumn.DataPropertyName = "urun_kodu";
-            this.urunkoduDataGridViewTextBoxColumn.HeaderText = "ÜRÜN KODU";
-            this.urunkoduDataGridViewTextBoxColumn.Name = "urunkoduDataGridViewTextBoxColumn";
-            // 
-            // urunismiDataGridViewTextBoxColumn
-            // 
-            this.urunismiDataGridViewTextBoxColumn.DataPropertyName = "urun_ismi";
-            this.urunismiDataGridViewTextBoxColumn.HeaderText = "ÜRÜN İSMİ";
-            this.urunismiDataGridViewTextBoxColumn.Name = "urunismiDataGridViewTextBoxColumn";
-            // 
-            // urunrengiDataGridViewTextBoxColumn
-            // 
-            this.urunrengiDataGridViewTextBoxColumn.DataPropertyName = "urun_rengi";
-            this.urunrengiDataGridViewTextBoxColumn.HeaderText = "ÜRÜN RENGİ";
-            this.urunrengiDataGridViewTextBoxColumn.Name = "urunrengiDataGridViewTextBoxColumn";
-            // 
-            // urunadetDataGridViewTextBoxColumn
-            // 
-            this.urunadetDataGridViewTextBoxColumn.DataPropertyName = "urun_adet";
-            this.urunadetDataGridViewTextBoxColumn.HeaderText = "ÜRÜN ADETİ";
-            this.urunadetDataGridViewTextBoxColumn.Name = "urunadetDataGridViewTextBoxColumn";
-            // 
-            // urunfiyatDataGridViewTextBoxColumn
-            // 
-            this.urunfiyatDataGridViewTextBoxColumn.DataPropertyName = "urun_fiyat";
-            this.urunfiyatDataGridViewTextBoxColumn.HeaderText = "SATIŞ FİYATI";
-            this.urunfiyatDataGridViewTextBoxColumn.Name = "urunfiyatDataGridViewTextBoxColumn";
             // 
             // ürün_beden
             // 
@@ -127,11 +94,6 @@
             this.urun_id.HeaderText = "ÜRÜN ID";
             this.urun_id.Name = "urun_id";
             // 
-            // urunlerBindingSource1
-            // 
-            this.urunlerBindingSource1.DataMember = "urunler";
-            this.urunlerBindingSource1.DataSource = this.mySDataSetBindingSource;
-            // 
             // mySDataSetBindingSource
             // 
             this.mySDataSetBindingSource.DataSource = this.mySDataSet;
@@ -141,11 +103,6 @@
             // 
             this.mySDataSet.DataSetName = "MySDataSet";
             this.mySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // urunlerBindingSource
-            // 
-            this.urunlerBindingSource.DataMember = "urunler";
-            this.urunlerBindingSource.DataSource = this.mySDataSetBindingSource;
             // 
             // button1
             // 
@@ -211,11 +168,6 @@
             this.textBox2.Size = new System.Drawing.Size(120, 27);
             this.textBox2.TabIndex = 7;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(148, 115);
@@ -264,6 +216,46 @@
             this.textBox8.Size = new System.Drawing.Size(137, 27);
             this.textBox8.TabIndex = 14;
             // 
+            // urunlerBindingSource1
+            // 
+            this.urunlerBindingSource1.DataMember = "urunler";
+            this.urunlerBindingSource1.DataSource = this.mySDataSetBindingSource;
+            // 
+            // urunfiyatDataGridViewTextBoxColumn
+            // 
+            this.urunfiyatDataGridViewTextBoxColumn.DataPropertyName = "urun_fiyat";
+            this.urunfiyatDataGridViewTextBoxColumn.HeaderText = "SATIŞ FİYATI";
+            this.urunfiyatDataGridViewTextBoxColumn.Name = "urunfiyatDataGridViewTextBoxColumn";
+            // 
+            // urunadetDataGridViewTextBoxColumn
+            // 
+            this.urunadetDataGridViewTextBoxColumn.DataPropertyName = "urun_adet";
+            this.urunadetDataGridViewTextBoxColumn.HeaderText = "ÜRÜN ADETİ";
+            this.urunadetDataGridViewTextBoxColumn.Name = "urunadetDataGridViewTextBoxColumn";
+            // 
+            // urunrengiDataGridViewTextBoxColumn
+            // 
+            this.urunrengiDataGridViewTextBoxColumn.DataPropertyName = "urun_rengi";
+            this.urunrengiDataGridViewTextBoxColumn.HeaderText = "ÜRÜN RENGİ";
+            this.urunrengiDataGridViewTextBoxColumn.Name = "urunrengiDataGridViewTextBoxColumn";
+            // 
+            // urunismiDataGridViewTextBoxColumn
+            // 
+            this.urunismiDataGridViewTextBoxColumn.DataPropertyName = "urun_ismi";
+            this.urunismiDataGridViewTextBoxColumn.HeaderText = "ÜRÜN İSMİ";
+            this.urunismiDataGridViewTextBoxColumn.Name = "urunismiDataGridViewTextBoxColumn";
+            // 
+            // urunkoduDataGridViewTextBoxColumn
+            // 
+            this.urunkoduDataGridViewTextBoxColumn.DataPropertyName = "urun_kodu";
+            this.urunkoduDataGridViewTextBoxColumn.HeaderText = "ÜRÜN KODU";
+            this.urunkoduDataGridViewTextBoxColumn.Name = "urunkoduDataGridViewTextBoxColumn";
+            // 
+            // urunlerBindingSource
+            // 
+            this.urunlerBindingSource.DataMember = "urunler";
+            this.urunlerBindingSource.DataSource = this.mySDataSetBindingSource;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,12 +276,12 @@
             this.Text = "ÜRÜN DÜZENLEME";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mySDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mySDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,26 +294,25 @@
         private MySDataSet mySDataSet;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ImageList ımageList1;
-        private System.Windows.Forms.BindingSource urunlerBindingSource;
         private MySDataSetTableAdapters.urunlerTableAdapter urunlerTableAdapter;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.BindingSource urunlerBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urunkoduDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urunismiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urunrengiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urunadetDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urunfiyatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ürün_beden;
         private System.Windows.Forms.DataGridViewTextBoxColumn urun_id;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunkoduDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunismiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunrengiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunadetDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn urunfiyatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource urunlerBindingSource1;
+        private System.Windows.Forms.BindingSource urunlerBindingSource;
     }
 }
