@@ -49,7 +49,7 @@ namespace MyS_Proje
         private void button7_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("select * from admins where id ='" + textBox2.Text + "' and password ='" + textBox4.Text + "' ", baglanti);
+            SqlCommand komut = new SqlCommand("select * from admins where id ='" +textBox2.Text +"' and password ='" + textBox4.Text + "' ", baglanti);
             gecis = komut.ExecuteReader();
             if (gecis.Read())
             {
@@ -90,6 +90,11 @@ namespace MyS_Proje
         {
             Form form5 = new Form5();   
             form5.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
     }

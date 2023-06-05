@@ -33,7 +33,7 @@ namespace MyS_Proje
 
 
         { baglanti.Open();
-           SqlCommand sil   = new SqlCommand("DELETE FROM urunler where urun_id = '" + dataGridView1.CurrentCell.Value.ToString() + "'" ,baglanti);
+           SqlCommand sil   = new SqlCommand("DELETE FROM urunler where urun_id = '"+textBox8.Text+"'" ,baglanti);
             sil.ExecuteNonQuery();
             baglanti.Close();
             textBox1_TextChanged(sender, e);
@@ -47,7 +47,7 @@ namespace MyS_Proje
 
         public void listele() {
             baglanti.Open();
-            SqlDataAdapter da = new SqlDataAdapter("select *from urunler ", baglanti);
+            SqlDataAdapter da = new SqlDataAdapter("select *from urunler ",baglanti);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -66,7 +66,7 @@ namespace MyS_Proje
                  "urun_fiyat='"+ dataGridView1.CurrentRow.Cells[4].Value + "' and urun_beden='" + dataGridView1.CurrentRow.Cells[5].Value.ToString() + "'and urun_id='" + dataGridView1.CurrentRow.Cells[6].Value.ToString() + "' ", baglanti);
             SqlCommand guncelle = new SqlCommand("Update urunler set urun_kodu='" + textBox2.Text + "',urun_ismi='" + textBox3.Text + "',urun_rengi='" + textBox4.Text + "',urun_adet='" +Convert.ToInt32(textBox5.Text)  + "',urun_fiyat='" + Convert.ToInt32(textBox6.Text) + "',urun_beden='" + textBox7.Text + "' , urun_id = ' " + textBox8.Text + "' where urun_id='"+dataGridView1.CurrentRow.Cells[6].Value.ToString()+"'",baglanti);*/
            
-            SqlCommand guncelle = new SqlCommand("Update urunler set urun_kodu = '" + textBox2.Text + "' , urun_ismi = '" + textBox3.Text + "' , urun_rengi = '" + textBox4.Text + "', urun_adet = '" + adet + "' , urun_fiyat = '" +fiyat+ "' , urun_beden = '" + textBox7.Text + "' , urun_id = '"+textBox8.Text+"' where urun_id = '"+dataGridView1.CurrentRow.Cells[6].Value.ToString()+"'", baglanti);
+            SqlCommand guncelle = new SqlCommand("Update urunler set urun_kodu = '"+ textBox2.Text +"' , urun_ismi = '" + textBox3.Text + "' , urun_rengi = '" + textBox4.Text + "', urun_adet = '" + adet + "' , urun_fiyat = '" +fiyat+ "' , urun_beden = '" + textBox7.Text + "' , urun_id = '"+textBox8.Text+"' where urun_id = '"+dataGridView1.CurrentRow.Cells[6].Value.ToString()+"'", baglanti);
             guncelle.ExecuteNonQuery();
             
             baglanti.Close();

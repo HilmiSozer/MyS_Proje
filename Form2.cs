@@ -42,14 +42,7 @@ namespace MyS_Proje
                 textBox1.Text = read["itemscount"].ToString();
 
             baglanti.Close();
-            counter = Convert.ToUInt16(textBox1.Text)+1;
-            
-           
-
-        
-
-            
-
+            counter = Convert.ToUInt16(textBox1.Text)+1;           
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -163,7 +156,7 @@ namespace MyS_Proje
                         {
                             holder =textBox1.Text+j+i;
                                 //dataGridView2.CurrentRow.Index+dataGridView2.CurrentCell.ColumnIndex 
-                            SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat,urun_beden,urun_id) values ('" + textBox1.Text + "','" + textBox2.Text + "' ,' " + dataGridView2.Rows[j].Cells[0].Value.ToString() + "','" + textBox5.Text + "','" + dataGridView2.Columns[i].Name.ToString() + "','" + holder + "')", baglanti);
+                            SqlCommand komut = new SqlCommand("insert into urunler( urun_kodu,urun_ismi,urun_rengi,urun_fiyat,urun_beden,urun_id) values ('"+ textBox1.Text +"','"+ textBox2.Text +"' ,' " +dataGridView2.Rows[j].Cells[0].Value.ToString() +"','" + textBox5.Text + "','"+ dataGridView2.Columns[i].Name.ToString() +"','"+ holder +"')", baglanti);
                             komut.ExecuteNonQuery();
                             //listBox1.Items.Add(dataGridView1.Rows[j].Cells[0].Value.ToString() + dataGridView1.Columns[i].Name.ToString());
                         }
@@ -201,9 +194,10 @@ namespace MyS_Proje
 
         }
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
 
-
-
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
