@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.urunlerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.urunlerTableAdapter = new MyS_Proje.MySDataSetTableAdapters.urunlerTableAdapter();
-            this.Kayitbuton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -41,10 +40,8 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.tableAdapterManager1 = new MyS_Proje.MySDataSetTableAdapters.TableAdapterManager();
-            this.urunlerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.urunlerTableAdapter1 = new MyS_Proje.MySDataSet1TableAdapters.urunlerTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.urunkoduDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,32 +53,26 @@
             this.urunidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunlerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.mySDataSet1 = new MyS_Proje.MySDataSet1();
-            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).BeginInit();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Kayitbuton = new System.Windows.Forms.Button();
+            this.urunlerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.urunlerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mySDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // urunlerTableAdapter
             // 
             this.urunlerTableAdapter.ClearBeforeFill = true;
-            // 
-            // Kayitbuton
-            // 
-            this.Kayitbuton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Kayitbuton.Location = new System.Drawing.Point(1028, 647);
-            this.Kayitbuton.Name = "Kayitbuton";
-            this.Kayitbuton.Size = new System.Drawing.Size(83, 36);
-            this.Kayitbuton.TabIndex = 1;
-            this.Kayitbuton.Text = "Kayıt";
-            this.Kayitbuton.UseVisualStyleBackColor = true;
-            this.Kayitbuton.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -123,6 +114,9 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToOrderColumns = true;
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -179,22 +173,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ÜRÜN KODU ";
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(50, 647);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 36);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Yeni Kayıt Oluştur";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(926, 651);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Location = new System.Drawing.Point(934, 643);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 28);
+            this.button2.Size = new System.Drawing.Size(80, 36);
             this.button2.TabIndex = 14;
             this.button2.Text = "Göster";
             this.button2.UseVisualStyleBackColor = true;
@@ -284,20 +269,59 @@
             this.mySDataSet1.DataSetName = "MySDataSet1";
             this.mySDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Location = new System.Drawing.Point(769, 643);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(142, 36);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Yeni Renk veya Beden";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Image = global::MyS_Proje.Properties.Resources.icons8_refresh_94;
+            this.button1.Location = new System.Drawing.Point(12, 613);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 79);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // Kayitbuton
+            // 
+            this.Kayitbuton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Kayitbuton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Kayitbuton.Image = ((System.Drawing.Image)(resources.GetObject("Kayitbuton.Image")));
+            this.Kayitbuton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Kayitbuton.Location = new System.Drawing.Point(1064, 643);
+            this.Kayitbuton.Name = "Kayitbuton";
+            this.Kayitbuton.Size = new System.Drawing.Size(76, 36);
+            this.Kayitbuton.TabIndex = 1;
+            this.Kayitbuton.Text = "Kayıt";
+            this.Kayitbuton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Kayitbuton.UseVisualStyleBackColor = true;
+            this.Kayitbuton.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 695);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.Kayitbuton);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form2";
             this.Text = "Ürün Oluştur";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -307,10 +331,11 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mySDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urunlerBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,7 +352,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private MySDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.BindingSource urunlerBindingSource1;
@@ -343,5 +367,7 @@
         private System.Windows.Forms.BindingSource urunlerBindingSource2;
         private MySDataSet1 mySDataSet1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
     }
 }

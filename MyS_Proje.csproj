@@ -79,6 +79,12 @@
     <Compile Include="Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
     <Compile Include="MySDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -106,6 +112,9 @@
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -114,6 +123,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="MySDataSet.xsc">
       <DependentUpon>MySDataSet.xsd</DependentUpon>
@@ -150,6 +160,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-property-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dollar-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-remove-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-refresh-94.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

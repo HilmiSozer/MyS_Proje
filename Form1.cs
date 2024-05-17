@@ -18,13 +18,13 @@ namespace MyS_Proje
         public Form1()
         { InitializeComponent();
              
-                /*button1.Visible = false;
+               button1.Visible = false;
                 button2.Visible = false;
                 button3.Visible = false;
                 button4.Visible = false;
                 button6.Visible = false;
-                groupBox1.Visible = true;*/
-            
+            groupBox1.Visible = true;
+           
             
 
         }
@@ -82,13 +82,13 @@ namespace MyS_Proje
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form form4= new Form4();
+            Form form4= new Form4(); //barkod oluşturma sayfası
             form4.ShowDialog(); 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form form5 = new Form5();   
+            Form form5 = new Form5();   //ürün satış sayfası
             form5.ShowDialog();
         }
 

@@ -15,3 +15,4 @@ C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.Form4.resour
 C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\bin\Debug\Zen.Barcode.Core.dll
 C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.csproj.CopyComplete
 C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.Form5.resources
+C:\Users\hilmi\source\repos\MyS_Proje\MyS_Proje\obj\Debug\MyS_Proje.Form6.resources

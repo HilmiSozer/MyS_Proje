@@ -67,5 +67,7 @@ namespace MyS_Proje
             printPreviewDialog1.ShowDialog();
 
         }
+
+       
     }
 }

@@ -117,47 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="urunlerTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>303, 17</value>
-  </metadata>
-  <metadata name="tableAdapterManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>467, 17</value>
-  </metadata>
-  <metadata name="urunlerTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>945, 17</value>
-  </metadata>
-  <metadata name="urunlerBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1239, 17</value>
-  </metadata>
-  <metadata name="urunlerBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1239, 17</value>
-  </metadata>
-  <metadata name="mySDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1115, 17</value>
-  </metadata>
-  <metadata name="mySDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1115, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Kayitbuton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAWZJREFUWEdjGAXDCeQC8X8SMUgP1UCDvJzifxCuz1X6//+WC1YMkoOpA+mBaKUO
-        GHXA4HCAsrIayGC8GKSGZg6ws3UiCiM7gJGBlWcCAzPHFyAbxaWkYnId4M8gqP6ZIfnWf4bcD+Rjswqy
-        HVDHYFr2D6uhpGAkB7Czs6OEDDJmZ+fAcEADSDNWQ0nBSA4AWXTj+i0U3NPdC6ZBcrRxgHnFf1kZeZwO
-        gImBaNo4IPLIfyYOvv862vpYHdDb00djB4Bw2L7/TOx8YEuIxODKiHoOgGGQeVDfEQNGHTDqgAF3QB0Q
-        gzRQG4PMJQr4y8vLfzl+7CRG4UEOPnb0xH85OTlQzeoHMZ4wYOTi4pnExsb2FcjG5hOSMMgcoHkTgWxG
-        IKYYGPDx8X1ZvWrD/zWrN8IxiM/Pxw/ypT5EGQ0ACwvLJyCF1ZfIGKjuI5CmCfhfXFxCEIPUQZRTHxQC
-        cQcRGKRuFJAJGBgAEnQb/w1z7zkAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="urunlerBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>134, 17</value>
-  </metadata>
-  <metadata name="urunlerBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>769, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>36</value>
-  </metadata>
 </root>

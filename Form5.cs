@@ -17,18 +17,18 @@ namespace MyS_Proje
         {
             InitializeComponent();
 
-            
+            textBox2.Focus();   
 
 
         }
 
         SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-BF37VJF;Initial Catalog=MyS;Integrated Security=True");
         int satir = 0;
-        int i;
+        int i,fiyat;
         int holder = 50;
         int price = 0;
         string temp;
-        int stokadet;
+        string temp2 ;
         SqlCommand yenistok;
 
         SqlDataReader ekle;
@@ -88,7 +88,9 @@ namespace MyS_Proje
 yenistok = new SqlCommand("Update urunler set urun_adet = '"+temp+ "' where urun_id like '" + dataGridView1.Rows[i].Cells[5].Value.ToString() + "'  ", baglanti);
                 yenistok.ExecuteNonQuery();
                 baglanti.Close();
-                MessageBox.Show(temp);
+
+                if(Convert.ToInt32(temp)<0)
+                MessageBox.Show("Stok adeti bulunmyan ürün satıldı.");
 
 
                 
@@ -127,20 +129,118 @@ yenistok = new SqlCommand("Update urunler set urun_adet = '"+temp+ "' where urun
                         dataGridView1.Rows[satir].Cells[4].Value = (ekle["urun_rengi"].ToString());
                         dataGridView1.Rows[satir].Cells[5].Value = (ekle["urun_id"].ToString());
 
-
+                       
                         satir++;
-
-
+                       
                     }
                     ekle.Close();
                     baglanti.Close();
+                    label2.Text = satir.ToString();
+                    for (i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                    {
+                        
+                        label4.Text ="";
+                        temp2 = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                       fiyat+= Convert.ToInt32(temp2);
+                        label4.Text = fiyat.ToString();
+
+                    }
+                    
+
 
                 }
                 finally
                 {
-
+                    fiyat= 0;
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox2.Text + 1;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox2.Text + 2;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox2.Text + 3;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox2.Text + 4;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox2.Text + 5;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox2.Text + 6;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox2.Text + 7;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox2.Text + 8;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox2.Text + 9;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox2.Text + 0;
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+fiyat = 0;
+
+            for (i = 0; i < dataGridView1.Rows.Count-1  ; i++)
+            {
+                if (dataGridView1.Rows[i].Cells[5].Value == null)
+                { }
+                else
+                {
+                    dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+            satir--;
+                    break;
+            
+                }
+
+            }
+            
+            for (i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+               
+                   label4.Text = "";
+                temp2 = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                fiyat += Convert.ToInt32(temp2);
+                label4.Text = fiyat.ToString();
+
+                label2.Text = satir.ToString();
+            }
+            }
+            
+        }
     }
-}
+

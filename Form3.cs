@@ -58,15 +58,16 @@ namespace MyS_Proje
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if(textBox5.Text!="")
             adet = Convert.ToInt32(textBox5.Text);
-            fiyat = Convert.ToDecimal(textBox6.Text);
+
+            if (textBox6.Text != "")
+                fiyat = Convert.ToDecimal(textBox6.Text);
+
             baglanti.Open();
-            /* SqlCommand guncelle = new SqlCommand("Update urunler set urun_kodu='"+textBox2.Text+ "',urun_ismi='"+textBox3.Text+ "',urun_rengi='"+textBox4.Text+ "',urun_adet='"+textBox5.Text+ "',urun_fiyat='"+textBox6.Text+ "',urun_beden='" +textBox7.Text+ "' , urun_id = ' " + textBox8.Text + "' "+
-                 " where urun_kodu='"+ dataGridView1.CurrentRow.Cells[0].Value.ToString() + "'and urun_ismi='"+ dataGridView1.CurrentRow.Cells[1].Value.ToString() + "' and urun_rengi='" + dataGridView1.CurrentRow.Cells[2].Value.ToString() + "'and urun_adet='" + dataGridView1.CurrentRow.Cells[3].Value + "' and " +
-                 "urun_fiyat='"+ dataGridView1.CurrentRow.Cells[4].Value + "' and urun_beden='" + dataGridView1.CurrentRow.Cells[5].Value.ToString() + "'and urun_id='" + dataGridView1.CurrentRow.Cells[6].Value.ToString() + "' ", baglanti);
-            SqlCommand guncelle = new SqlCommand("Update urunler set urun_kodu='" + textBox2.Text + "',urun_ismi='" + textBox3.Text + "',urun_rengi='" + textBox4.Text + "',urun_adet='" +Convert.ToInt32(textBox5.Text)  + "',urun_fiyat='" + Convert.ToInt32(textBox6.Text) + "',urun_beden='" + textBox7.Text + "' , urun_id = ' " + textBox8.Text + "' where urun_id='"+dataGridView1.CurrentRow.Cells[6].Value.ToString()+"'",baglanti);*/
            
-            SqlCommand guncelle = new SqlCommand("Update urunler set urun_kodu = '"+ textBox2.Text +"' , urun_ismi = '" + textBox3.Text + "' , urun_rengi = '" + textBox4.Text + "', urun_adet = '" + adet + "' , urun_fiyat = '" +fiyat+ "' , urun_beden = '" + textBox7.Text + "' , urun_id = '"+textBox8.Text+"' where urun_id = '"+dataGridView1.CurrentRow.Cells[6].Value.ToString()+"'", baglanti);
+            SqlCommand guncelle = new SqlCommand("Update urunler set urun_kodu = '"+ textBox2.Text +"' , urun_ismi = '" + textBox3.Text + "' , urun_rengi = '" + textBox4.Text + "', urun_adet = '" + adet + "' ," +
+                " urun_fiyat = '" +fiyat+ "' , urun_beden = '" + textBox7.Text + "' , urun_id = '"+textBox8.Text+"' where urun_id = '"+dataGridView1.CurrentRow.Cells[6].Value.ToString()+"'", baglanti);
             guncelle.ExecuteNonQuery();
             
             baglanti.Close();
